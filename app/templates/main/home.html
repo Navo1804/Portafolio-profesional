@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block titulo %}Inicio | Mi Portafolio{% endblock %}
+
+{% block contenido %}
+<section class="hero-ledger">
+    <div class="container hero-inner">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="eyebrow">Negocios Digitales · Desarrollo de Software</span>
+                <h1>Hola, soy Tu Nombre</h1>
+                <div class="hero-rule"></div>
+                <p class="lead">
+                    Breve descripción profesional: quién eres, qué haces y qué problemas
+                    resuelves en la intersección entre negocios y tecnología.
+                </p>
+                <a href="{{ url_for('main.proyectos') }}" class="btn-ledger-primary mt-2">Ver proyectos</a>
+                <a href="{{ url_for('main.contacto') }}" class="btn-ledger-outline mt-2 ms-2" style="border-color: var(--border-dark); color: var(--paper);">Contactar</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

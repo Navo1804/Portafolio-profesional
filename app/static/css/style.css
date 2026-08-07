@@ -1,0 +1,334 @@
+/* ===================================================================
+   SISTEMA DE DISEÑO — "Ledger" (Negocios Digitales)
+   Paleta: navy profundo + dorado, inspirada en estados de cuenta
+   financieros. Tipografía: serif de autoridad + sans limpia +
+   monoespaciada para el detalle técnico/dev.
+   =================================================================== */
+
+:root {
+    --ink:        #0F1B2D;   /* navy profundo, fondo oscuro / texto principal */
+    --ink-soft:   #1C2B42;   /* navy secundario, superficies oscuras */
+    --paper:      #F5F6F8;   /* fondo claro */
+    --paper-alt:  #FFFFFF;   /* tarjetas sobre fondo claro */
+    --steel:      #5B6472;   /* texto secundario */
+    --steel-light:#94A0B2;   /* texto terciario / placeholders */
+    --gold:       #A9791F;   /* acento — usar con moderación */
+    --gold-soft:  #D9B463;   /* acento claro, sobre fondo oscuro */
+    --border:     #E2E4E8;   /* líneas finas sobre fondo claro */
+    --border-dark: rgba(245, 246, 248, 0.14); /* líneas finas sobre fondo oscuro */
+}
+
+/* --- Tipografía base --- */
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background-color: var(--paper);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main { flex: 1; }
+
+h1, h2, h3, .font-display {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+}
+
+.eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+}
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* --- Navbar --- */
+
+.navbar-ledger {
+    background-color: var(--ink);
+    border-bottom: 1px solid var(--border-dark);
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.navbar-ledger .navbar-brand {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.25rem;
+    color: var(--paper) !important;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+
+.navbar-ledger .navbar-brand small {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    color: var(--gold-soft);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.navbar-ledger .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--steel-light) !important;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar-ledger .nav-link:hover { color: var(--paper) !important; }
+
+.navbar-ledger .nav-link.active { color: var(--paper) !important; }
+
+.navbar-ledger .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.1rem;
+    height: 1px;
+    background: var(--gold);
+}
+
+.navbar-ledger .navbar-toggler {
+    border-color: var(--border-dark);
+}
+
+/* --- Botones --- */
+
+.btn-ledger-primary {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    color: var(--ink);
+    padding: 0.75rem 1.6rem;
+    border-radius: 2px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.btn-ledger-primary:hover {
+    background-color: transparent;
+    color: var(--gold-soft);
+}
+
+.btn-ledger-outline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 0.7rem 1.4rem;
+    border-radius: 2px;
+    background: transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    display: inline-block;
+}
+
+.btn-ledger-outline:hover {
+    border-color: var(--gold);
+    background-color: rgba(169, 121, 31, 0.06);
+    color: var(--ink);
+}
+
+/* --- Hero (home) --- */
+
+.hero-ledger {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: 6rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-ledger::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--border-dark) 1px, transparent 1px);
+    background-size: 100% 44px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hero-ledger .hero-inner { position: relative; z-index: 1; }
+
+.hero-ledger h1 {
+    color: var(--paper);
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    margin: 1rem 0;
+}
+
+.hero-ledger p.lead {
+    color: var(--steel-light);
+    max-width: 46ch;
+    font-size: 1.05rem;
+}
+
+.hero-rule {
+    width: 64px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1.4rem 0;
+}
+
+/* --- Secciones generales --- */
+
+.section-ledger { padding: 4.5rem 0; }
+
+.section-header { margin-bottom: 2.5rem; }
+
+/* --- Filas tipo "línea de estado de cuenta" (estudios / experiencia) --- */
+
+.ledger-row {
+    border-bottom: 1px solid var(--border);
+    padding: 1.6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.ledger-row:first-child { border-top: 1px solid var(--border); }
+
+.ledger-row .ledger-period {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.ledger-row h5 {
+    font-family: 'Source Serif 4', serif;
+    margin-bottom: 0.25rem;
+}
+
+.ledger-row .ledger-sub {
+    color: var(--steel);
+    font-size: 0.92rem;
+}
+
+/* --- Tarjetas de proyecto --- */
+
+.card-ledger {
+    background: var(--paper-alt);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.8rem;
+    height: 100%;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-ledger:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.card-ledger .card-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+/* --- Footer --- */
+
+.footer-ledger {
+    background-color: var(--ink);
+    color: var(--steel-light);
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-dark);
+}
+
+.footer-ledger a.icon-link {
+    color: var(--paper);
+    border: 1px solid var(--border-dark);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.35rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-ledger a.icon-link:hover {
+    border-color: var(--gold);
+    color: var(--gold-soft);
+}
+
+.footer-ledger .footer-fine {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--steel);
+}
+
+/* --- Formulario de contacto --- */
+
+.form-ledger .form-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 0.4rem;
+}
+
+.form-ledger .form-control {
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    padding: 0.65rem 0.9rem;
+}
+
+.form-ledger .form-control:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(169, 121, 31, 0.12);
+}
+
+.card-contact-ledger {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 2px;
+    padding: 2rem;
+}
+
+.card-contact-ledger h5 { color: var(--paper); }
+
+/* --- Accesibilidad: foco visible en toda la página --- */
+
+a:focus-visible, button:focus-visible, .form-control:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+}

@@ -1,0 +1,22 @@
+<footer class="footer-ledger">
+    <div class="container text-center">
+        <div class="mb-3">
+            {% if config.get('TELEFONO_CONTACTO') %}
+                <a href="tel:{{ config['TELEFONO_CONTACTO'] }}" class="icon-link" title="Llamar">
+                    <i class="bi bi-telephone-fill"></i>
+                </a>
+            {% endif %}
+            {% if config.get('WHATSAPP_NUMERO') %}
+                <a href="https://wa.me/{{ config['WHATSAPP_NUMERO'] }}" class="icon-link" target="_blank" title="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            {% endif %}
+            {% if config.get('MAIL_DESTINO') %}
+                <a href="mailto:{{ config['MAIL_DESTINO'] }}" class="icon-link" title="Correo">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+            {% endif %}
+        </div>
+        <p class="mb-0 footer-fine">&copy; 2026 TU NOMBRE — NEGOCIOS DIGITALES</p>
+    </div>
+</footer>
