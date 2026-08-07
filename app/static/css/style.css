@@ -6,7 +6,7 @@
    =================================================================== */
 
 :root {
-    --ink:        #0F1B2D;   /* navy profundo, fondo oscuro / texto principal */
+    --ink:        #080B10;   /* casi negro, con un dejo de navy */
     --ink-soft:   #1C2B42;   /* navy secundario, superficies oscuras */
     --paper:      #F5F6F8;   /* fondo claro */
     --paper-alt:  #FFFFFF;   /* tarjetas sobre fondo claro */
@@ -331,4 +331,101 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; animation: none !important; }
+}
+/* --- Hero con foto recortada sobre fondo oscuro (Inicio) --- */
+
+.hero-split {
+    background-color: var(--ink);
+    position: relative;
+    overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: stretch;
+}
+
+.hero-split-left {
+    flex: 1 1 55%;
+    display: flex;
+    align-items: center;
+    padding: 3rem 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-split-content { max-width: 46ch; }
+
+.hero-split-left h1 {
+    color: var(--paper);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.hero-split-left h1 .highlight { color: var(--gold-soft); }
+
+.hero-split-left p.lead {
+    color: var(--steel-light);
+    font-size: 1.02rem;
+}
+
+.hero-split-right {
+    flex: 1 1 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.hero-split-photo {
+    position: relative;
+    z-index: 1;
+    height: 580px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+}
+
+.hero-split-tag {
+    position: absolute;
+    z-index: 2;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 27, 45, 0.7);
+    border: 1px solid var(--border-dark);
+    backdrop-filter: blur(4px);
+    padding: 0.5rem 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--paper);
+    white-space: nowrap;
+}
+
+.btn-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    background-color: var(--gold);
+    color: var(--ink);
+    border: 1px solid var(--gold);
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-pill:hover {
+    background-color: transparent;
+    color: var(--gold-soft);
+}
+
+@media (max-width: 991.98px) {
+    .hero-split { flex-direction: column; min-height: auto; }
+    .hero-split-left { padding: 3rem 1.5rem; }
+    .hero-split-right { height: 420px; }
+    .hero-split-photo { height: 420px; }
 }

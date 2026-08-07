@@ -1,23 +1,22 @@
 {% extends 'base.html' %}
-{% block titulo %}Angelo Navarrete| Portafolio{% endblock %}
+{% block titulo %}Angelo Navarrete | Portafolio{% endblock %}
 
 {% block contenido %}
-<section class="hero-ledger">
-    <div class="container hero-inner">
-        <div class="row">
-            <div class="col-lg-8">
-                <span class="eyebrow">Negocios Digitales · Desarrollo de Software</span>
-                <h1>Angelo Steven Navarrete Vásquez</h1>
-                <div class="hero-rule"></div>
-                <p class="lead">
-                    Transformando la estrategia de los negocios digitales en realidades
-                    tecnológicas mediante automatización inteligente, desarrollo y visión
-                    de futuro.
-                </p>
-                <a href="{{ url_for('main.proyectos') }}" class="btn-ledger-primary mt-2">Ver proyectos</a>
-                <a href="{{ url_for('main.contacto') }}" class="btn-ledger-outline mt-2 ms-2" style="border-color: var(--border-dark); color: var(--paper);">Contactar</a>
-            </div>
+<section class="hero-split">
+    <div class="hero-split-left">
+        <div class="hero-split-content">
+            <span class="eyebrow">Negocios Digitales · Desarrollo de Software</span>
+            <h1>Transformando la estrategia de los <span class="highlight">negocios digitales</span> en realidades tecnológicas.</h1>
+            <p class="lead">
+                Automatización inteligente, desarrollo de software y visión de
+                futuro al servicio de tus ideas.
+            </p>
+            <a href="{{ url_for('main.contacto') }}" class="btn-pill mt-3">Hablemos de tu próximo proyecto</a>
         </div>
+    </div>
+    <div class="hero-split-right">
+        <img src="{{ url_for('static', filename='img/angelo-hero.png') }}" alt="Angelo Navarrete" class="hero-split-photo">
+        <span class="hero-split-tag">Angelo Navarrete</span>
     </div>
 </section>
 {% endblock %}
