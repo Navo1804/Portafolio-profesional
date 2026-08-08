@@ -40,21 +40,13 @@ h1, h2, h3, .font-display {
 
 .eyebrow {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.72rem;
+    font-size: 0.85em;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-}
-
-.eyebrow::before {
-    content: '';
-    width: 22px;
-    height: 1px;
-    background: var(--gold);
-    display: inline-block;
 }
 
 .mono { font-family: 'IBM Plex Mono', monospace; }
@@ -246,7 +238,12 @@ h1, h2, h3, .font-display {
     border-color: var(--gold);
     transform: translateY(-2px);
 }
-
+.card-ledger .card-illustration {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
 .card-ledger .card-tag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
@@ -289,6 +286,28 @@ h1, h2, h3, .font-display {
     font-size: 0.72rem;
     letter-spacing: 0.05em;
     color: var(--steel);
+}
+/* --- Franja de stack tecnológico --- */
+
+.stack-strip {
+    border-top: 1px solid var(--border);
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.stack-pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: var(--paper-alt);
 }
 
 /* --- Formulario de contacto --- */
@@ -338,7 +357,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
     background-color: var(--ink);
     position: relative;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 680px;
     display: flex;
     align-items: stretch;
 }
@@ -346,8 +365,8 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 .hero-split-left {
     flex: 1 1 55%;
     display: flex;
-    align-items: center;
-    padding: 3rem 4rem;
+    align-items: flex-start;
+    padding: 5rem 4rem 3rem;
     position: relative;
     z-index: 2;
 }
@@ -372,34 +391,34 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
     flex: 1 1 45%;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 1.5rem;
+    padding-top: 5rem;
 }
 
 .hero-split-photo {
     position: relative;
     z-index: 1;
-    height: 580px;
+    height: 460px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    object-position: bottom center;
+    object-position: center;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
 }
 
 .hero-split-tag {
     position: absolute;
     z-index: 2;
-    bottom: 1.5rem;
+    bottom: 5.5rem;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(15, 27, 45, 0.7);
     border: 1px solid var(--border-dark);
     backdrop-filter: blur(4px);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.3rem;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     letter-spacing: 0.06em;
     color: var(--paper);
     white-space: nowrap;
@@ -407,7 +426,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 
 .btn-pill {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     letter-spacing: 0.05em;
     background-color: var(--gold);
     color: var(--ink);
@@ -421,6 +440,22 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 .btn-pill:hover {
     background-color: transparent;
     color: var(--gold-soft);
+}
+.hero-secondary-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--gold-soft);
+    text-decoration: none;
+    margin-left: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.2s ease;
+}
+
+.hero-secondary-link:hover {
+    color: var(--paper);
+    gap: 0.6rem;
 }
 
 @media (max-width: 991.98px) {
