@@ -2,19 +2,47 @@
 {% block titulo %}Experiencia | Mi Portafolio{% endblock %}
 
 {% block contenido %}
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">Trayectoria</span>
+        <h2>Experiencia</h2>
+    </div>
+</section>
+
 <section class="section-ledger">
     <div class="container">
-        <div class="section-header">
-            <span class="eyebrow">Trayectoria</span>
-            <h2 class="mt-2">Experiencia</h2>
+
+        <div class="experience-spotlight">
+            <div class="experience-header">
+                <div>
+                    <h3>Asistente — Área de Admisiones</h3>
+                    <p class="experience-org">Universidad Politécnica Salesiana</p>
+                </div>
+                <span class="ledger-period">2025</span>
+            </div>
+
+            <ul class="experience-list">
+                <li>Atención al cliente, informando sobre las distintas carreras a estudiantes interesados en ingresar a la universidad.</li>
+                <li>Seguimiento telefónico a estudiantes ya registrados en la página, ampliando la información sobre la carrera solicitada.</li>
+                <li>Actualización constante de HubSpot con la información recopilada durante las llamadas.</li>
+                <li>Creación y mantenimiento de una base de datos en Excel para estudiantes no interesados, sincronizada posteriormente con HubSpot.</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="stack-pill">CRM / HubSpot</span>
+                <span class="stack-pill">Atención al cliente</span>
+                <span class="stack-pill">Excel</span>
+                <span class="stack-pill">Comunicación telefónica</span>
+                <span class="stack-pill">Gestión de leads</span>
+            </div>
         </div>
 
-        <div class="ledger-row">
-            <div>
-                <h5>Asistente — Área de Admisiones</h5>
-                <p class="ledger-sub mb-0">Empresa — Universidad Politécnica Salesiana — Manejo de HubSpot y atención al cliente..</p>
+        <div class="cta-banner">
+            <div class="cta-text">
+              <i class="bi bi-briefcase"></i>
+              <p>Abierto a nuevas oportunidades y prácticas profesionales.</p>
             </div>
-            <span class="ledger-period">2025</span>
+            <a href="{{ url_for('main.contacto') }}" class="btn-pill">Hablemos</a>
         </div>
 
     </div>

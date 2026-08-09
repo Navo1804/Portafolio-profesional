@@ -440,6 +440,98 @@ h1, h2, h3, .font-display {
     border-radius: 999px;
     background: var(--paper-alt);
 }
+/* --- Experiencia: tarjeta spotlight + cierre con CTA --- */
+
+.experience-spotlight {
+    background: var(--paper-alt);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 2.2rem 2.5rem;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-header h3 {
+    margin: 0 0 0.2rem;
+    font-size: 1.4rem;
+}
+
+.experience-header .experience-org {
+    color: var(--steel);
+    margin: 0;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+.experience-list li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cta-banner {
+    background: var(--paper-alt);
+    border: 1.5px dashed var(--gold);
+    border-radius: 4px;
+    padding: 1.5rem 2.2rem;
+    max-width: 780px;
+    margin: 3.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cta-banner .cta-text {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.cta-banner .cta-text i {
+    font-size: 1.4rem;
+    color: var(--gold);
+}
+
+.cta-banner p {
+    color: var(--ink);
+    font-size: 1.02rem;
+    margin: 0;
+}
 
 /* --- Formulario de contacto --- */
 
