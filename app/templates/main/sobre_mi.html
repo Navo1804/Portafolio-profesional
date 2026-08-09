@@ -2,21 +2,37 @@
 {% block titulo %}Sobre mí | Mi Portafolio{% endblock %}
 
 {% block contenido %}
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">Perfil</span>
+        <h2>Sobre mí</h2>
+        <p class="about-tagline">Convierto ideas en productos digitales.</p>
+    </div>
+</section>
+
 <section class="section-ledger">
     <div class="container">
-        <div class="section-header">
-            <span class="eyebrow">Perfil</span>
-            <h2 class="mt-2">Sobre mí</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-8">
-                <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.75;">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-4">
+                <div class="about-photo-frame">
+                    <img src="{{ url_for('static', filename='img/angelo-hero.png') }}" alt="Angelo Navarrete" class="about-photo">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.75; text-align: center;">
                     Estudiante de Negocios Digitales y apasionado por la tecnología, especializado
                     en el desarrollo de aplicaciones, automatización con inteligencia artificial
                     y gestión de proyectos innovadores como agentes de criptomonedas. Fusiono
                     la estrategia comercial con soluciones técnicas funcionales para transformar
                     ideas en realidades digitales.
                 </p>
+
+                <div class="facts-row">
+                    <span class="fact-pill"><i class="bi bi-geo-alt"></i> Quito, Ecuador</span>
+                    <span class="fact-pill"><i class="bi bi-translate"></i> Español · Inglés</span>
+                    <span class="fact-pill"><i class="bi bi-mortarboard"></i> 7.º semestre</span>
+                    <span class="fact-pill"><i class="bi bi-briefcase"></i> Abierto a prácticas</span>
+                </div>
             </div>
         </div>
     </div>
