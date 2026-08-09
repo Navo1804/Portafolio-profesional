@@ -2,42 +2,67 @@
 {% block titulo %}Estudios | Mi Portafolio{% endblock %}
 
 {% block contenido %}
-<section class="section-ledger">
+<section class="about-banner">
     <div class="container">
-        <div class="section-header">
-            <span class="eyebrow">Formación</span>
-            <h2 class="mt-2">Áreas de estudio</h2>
-        </div>
+        <span class="eyebrow">Formación</span>
+        <h2>Áreas de estudio</h2>
+    </div>
+</section>
 
-        <div class="ledger-row">
-            <div>
-                <h5>Bachiller</h5>
-                <p class="ledger-sub mb-0">Colegio Américas del Valle — Valle de los Chillos</p>
-            </div>
-            <span class="ledger-period">2019</span>
-        </div>
-        <div class="ledger-row">
-            <div>
-                <h5>Tecnólogo Superior en Gastronomía</h5>
-                <p class="ledger-sub mb-0">Tecnológico Universitario Rumiñahui — Cantón Rumiñahui</p>
-            </div>
-            <span class="ledger-period">2022</span>
-        </div>
-        <div class="ledger-row">
-            <div>
-                <h5>Inglés — Nivel Intermedio</h5>
-                <p class="ledger-sub mb-0">Centro de Educación Continua EPN — Quito</p>
-            </div>
-            <span class="ledger-period">Manejo</span>
-        </div>
-        <div class="ledger-row">
-            <div>
-                <h5>Negocios Digitales</h5>
-                <p class="ledger-sub mb-0">Universidad Politécnica Salesiana — El Girón, Quito</p>
-            </div>
-            <span class="ledger-period">7.º semestre — Actual</span>
-        </div>
+<section class="section-ledger">
+    <div class="container px-0">
 
+        <div class="studies-timeline">
+
+            <div class="study-item start">
+                <span class="study-index">01</span>
+                <div class="study-card start">
+                    <div class="study-badge">CAV</div>
+                    <div class="study-info">
+                        <h5>Bachiller</h5>
+                        <p class="study-sub">Colegio Américas del Valle — Valle de los Chillos</p>
+                        <span class="study-period">2019</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-item end">
+                <span class="study-index">02</span>
+                <div class="study-card end">
+                    <div class="study-badge">TUR</div>
+                    <div class="study-info">
+                        <h5>Tecnólogo Superior en Gastronomía</h5>
+                        <p class="study-sub">Tecnológico Universitario Rumiñahui</p>
+                        <span class="study-period">2022</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-item start">
+                <span class="study-index">03</span>
+                <div class="study-card start">
+                    <div class="study-badge">EPN</div>
+                    <div class="study-info">
+                        <h5>Inglés — Nivel Intermedio</h5>
+                        <p class="study-sub">Centro de Educación Continua EPN — Quito</p>
+                        <span class="study-period">Certificación</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="study-item end">
+                <span class="study-index">04</span>
+                <div class="study-card end">
+                    <div class="study-badge">UPS</div>
+                    <div class="study-info">
+                        <h5>Negocios Digitales</h5>
+                        <p class="study-sub">Universidad Politécnica Salesiana — El Girón</p>
+                        <span class="study-period">7.º semestre — Actual</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 {% endblock %}

@@ -192,7 +192,132 @@ h1, h2, h3, .font-display {
 .section-ledger { padding: 4.5rem 0; }
 
 .section-header { margin-bottom: 2.5rem; }
+/* --- Estudios: tarjetas tipo píldora, alternadas izq/der --- */
 
+.studies-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.studies-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    border-left: 2px dashed var(--gold);
+    opacity: 0.45;
+    z-index: 0;
+}
+
+.study-item {
+    position: relative;
+    z-index: 1;
+}
+
+.study-index {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: var(--gold);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.study-item.start .study-index {
+    left: calc(-50vw + 50% + 560px + 1.5rem);
+    right: auto;
+}
+
+.study-item.end .study-index {
+    right: calc(-50vw + 50% + 560px + 1.5rem);
+    left: auto;
+}
+
+@media (max-width: 767.98px) {
+    .studies-timeline::before { display: none; }
+    .study-index { display: none; }
+}
+
+.study-card {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background: var(--paper-alt);
+    border: 1.5px solid var(--gold);
+    border-radius: 0 999px 999px 0;
+    border-left: none;
+    padding: 0.6rem 1.75rem 0.6rem 1rem;
+    max-width: 560px;
+    margin-left: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50% + 1rem);
+}
+
+.study-card.end {
+    margin-left: auto;
+    margin-right: calc(-50vw + 50%);
+    flex-direction: row-reverse;
+    border-radius: 999px 0 0 999px;
+    border-left: 1.5px solid var(--gold);
+    border-right: none;
+    padding: 0.6rem 1rem 0.6rem 1.75rem;
+    padding-right: calc(50vw - 50% + 1rem);
+    text-align: right;
+}
+
+.study-badge {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+.study-info h5 {
+    margin: 0 0 3px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.2rem;
+}
+
+.study-info .study-sub {
+    font-size: 1rem;
+    color: var(--steel);
+    margin: 0;
+}
+
+.study-info .study-period {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--gold);
+    display: block;
+    margin-top: 5px;
+}
+
+@media (max-width: 767.98px) {
+    .study-card, .study-card.end {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        flex-direction: row;
+        text-align: left;
+        padding: 0.6rem 1.75rem 0.6rem 0.6rem;
+        border-radius: 999px;
+        border: 1.5px solid var(--gold);
+    }
+}
 /* --- Filas tipo "línea de estado de cuenta" (estudios / experiencia) --- */
 
 .ledger-row {
