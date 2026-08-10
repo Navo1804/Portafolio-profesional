@@ -2,13 +2,15 @@
 {% block titulo %}Contacto | Mi Portafolio{% endblock %}
 
 {% block contenido %}
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">Hablemos</span>
+        <h2>Contáctame</h2>
+    </div>
+</section>
+
 <section class="section-ledger">
     <div class="container">
-        <div class="section-header text-center">
-            <span class="eyebrow" style="justify-content: center;">Hablemos</span>
-            <h2 class="mt-2">Contáctame</h2>
-        </div>
-
         <div class="row justify-content-center g-5">
 
             <!-- Formulario -->
@@ -18,29 +20,29 @@
 
                     <div class="mb-3">
                         {{ form.nombre.label(class="form-label") }}
-                        {{ form.nombre(class="form-control" + (" is-invalid" if form.nombre.errors else "")) }}
+                        {{ form.nombre(class="form-control" + (" is-invalid" if form.nombre.errors else ""), placeholder="Ej: Juan Pérez") }}
                         {% for error in form.nombre.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                     </div>
 
                     <div class="mb-3">
                         {{ form.correo.label(class="form-label") }}
-                        {{ form.correo(class="form-control" + (" is-invalid" if form.correo.errors else "")) }}
+                        {{ form.correo(class="form-control" + (" is-invalid" if form.correo.errors else ""), placeholder="tu@correo.com") }}
                         {% for error in form.correo.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                     </div>
 
                     <div class="mb-3">
                         {{ form.asunto.label(class="form-label") }}
-                        {{ form.asunto(class="form-control" + (" is-invalid" if form.asunto.errors else "")) }}
+                        {{ form.asunto(class="form-control" + (" is-invalid" if form.asunto.errors else ""), placeholder="¿En qué puedo ayudarte?") }}
                         {% for error in form.asunto.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                     </div>
 
                     <div class="mb-4">
                         {{ form.mensaje.label(class="form-label") }}
-                        {{ form.mensaje(class="form-control" + (" is-invalid" if form.mensaje.errors else ""), rows=5) }}
+                        {{ form.mensaje(class="form-control" + (" is-invalid" if form.mensaje.errors else ""), rows=5, placeholder="Cuéntame sobre tu proyecto o consulta...") }}
                         {% for error in form.mensaje.errors %}<div class="invalid-feedback">{{ error }}</div>{% endfor %}
                     </div>
 
-                    {{ form.enviar(class="btn-ledger-primary w-100") }}
+                    {{ form.enviar(class="btn-pill w-100") }}
                 </form>
             </div>
 
@@ -51,22 +53,27 @@
                     <h5 class="mt-2 mb-4 text-center">Contacto directo</h5>
 
                     {% if config.get('MAIL_DESTINO') %}
-                    <a href="mailto:{{ config['MAIL_DESTINO'] }}" class="btn-ledger-outline w-100 mb-3 text-center d-block" style="border-color: var(--border-dark); color: var(--paper);">
+                    <a href="mailto:{{ config['MAIL_DESTINO'] }}" class="w-100 mb-3 text-center d-block" style="border: 1px solid var(--border-dark); color: var(--paper); border-radius: 999px; padding: 0.7rem 1.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
                         <i class="bi bi-envelope-fill me-2"></i>Escríbeme
                     </a>
                     {% endif %}
 
                     {% if config.get('TELEFONO_CONTACTO') %}
-                    <a href="tel:{{ config['TELEFONO_CONTACTO'] }}" class="btn-ledger-outline w-100 mb-3 text-center d-block" style="border-color: var(--border-dark); color: var(--paper);">
+                    <a href="tel:{{ config['TELEFONO_CONTACTO'] }}" class="w-100 mb-3 text-center d-block" style="border: 1px solid var(--border-dark); color: var(--paper); border-radius: 999px; padding: 0.7rem 1.4rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
                         <i class="bi bi-telephone-fill me-2"></i>Llámame
                     </a>
                     {% endif %}
 
                     {% if config.get('WHATSAPP_NUMERO') %}
-                    <a href="https://wa.me/{{ config['WHATSAPP_NUMERO'] }}" target="_blank" class="btn-ledger-primary w-100 text-center d-block">
+                    <a href="https://wa.me/{{ config['WHATSAPP_NUMERO'] }}" target="_blank" class="btn-pill w-100 text-center d-block">
                         <i class="bi bi-whatsapp me-2"></i>WhatsApp
                     </a>
                     {% endif %}
+
+                    <div class="contact-extra-info">
+                        <p><i class="bi bi-geo-alt"></i> Quito, Ecuador</p>
+                        <p><i class="bi bi-clock"></i> Respondo en menos de 24h</p>
+                    </div>
                 </div>
             </div>
 
