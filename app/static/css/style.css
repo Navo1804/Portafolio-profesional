@@ -836,9 +836,10 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 
 .about-photo {
     width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
+    height: auto;
     display: block;
+    object-fit: contain;
+    background: transparent;
 }
 
 .facts-row {
