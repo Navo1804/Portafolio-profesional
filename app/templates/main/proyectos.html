@@ -14,28 +14,31 @@
         <div class="row g-4">
 
             <div class="col-md-4">
-                <a href="https://github.com/gabriel-toaquiza/e-shoop" target="_blank" class="project-card" style="background-image: url('{{ url_for('static', filename='img/proyectos/verova.jpg') }}');">
+                <a href="{{ url_for('main.proyecto_verova') }}" class="project-card"
+                   style="background-image: url('{{ url_for('static', filename='img/proyectos/verova.jpg') }}');">
                     <div class="project-card-body">
                         <span class="project-collab"><i class="bi bi-people-fill"></i> En colaboración con Gabriel Toaquiza</span>
                         <h5>Verova — E-commerce</h5>
                         <p>Catálogo de productos artesanales, personalización, carrito, favoritos y pedidos con pago por transferencia verificada. Incluye panel de administración.</p>
-                        <span class="btn-ver-mas">Ver en GitHub</span>
+                        <span class="btn-ver-mas">Ver proyecto</span>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4">
-                <a href="https://github.com/Navo1804/Agente-Criptomonedas" target="_blank" class="project-card" style="background-image: url('{{ url_for('static', filename='img/proyectos/agente-cripto.jpg') }}');">
+                <a href="{{ url_for('main.proyecto_agente_cripto') }}" class="project-card"
+                   style="background-image: url('{{ url_for('static', filename='img/proyectos/agente-cripto.jpg') }}');">
                     <div class="project-card-body">
                         <h5>Agente de Criptomonedas</h5>
                         <p>Agente de IA desarrollado con Python para analizar y gestionar portafolios de criptomonedas de forma automatizada.</p>
-                        <span class="btn-ver-mas">Ver en GitHub</span>
+                        <span class="btn-ver-mas">Ver proyecto</span>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4">
-                <a href="https://hidalgotunuevohogar.my.canva.site/" target="_blank" class="project-card" style="background-image: url('{{ url_for('static', filename='img/proyectos/edificio-sigma.jpg') }}');">
+                <a href="{{ url_for('main.proyecto_edificio_sigma') }}" class="project-card"
+                   style="background-image: url('{{ url_for('static', filename='img/proyectos/edificio-sigma.jpg') }}');">
                     <div class="project-card-body">
                         <h5>Edificio Sigma</h5>
                         <p>Análisis financiero integral y propuesta de inversión de expansión, basado en los estados financieros de Hidalgo e Hidalgo S.A.</p>

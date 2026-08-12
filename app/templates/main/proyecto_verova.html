@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block titulo %}Verova — E-commerce | Mi Portafolio{% endblock %}
+
+{% block contenido %}
+
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">
+            <a href="{{ url_for('main.proyectos') }}" class="eyebrow-back">← Proyectos</a>
+        </span>
+        <h2>Verova — E-commerce</h2>
+    </div>
+</section>
+
+<section class="section-ledger">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <!-- Columna principal -->
+            <div class="col-lg-8">
+
+                <!-- Galería -->
+                <div class="project-gallery mb-5">
+                    <img id="gallery-main"
+                         src="{{ url_for('static', filename='img/proyectos/verova/verova-1.jpg') }}"
+                         alt="Verova E-commerce"
+                         class="project-gallery-main mb-3">
+                    <div class="project-gallery-thumbs">
+                        <img src="{{ url_for('static', filename='img/proyectos/verova/verova-1.jpg') }}"
+                             alt="Vista 1" class="gallery-thumb active"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/verova/verova-2.jpg') }}"
+                             alt="Vista 2" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/verova/verova-3.jpg') }}"
+                             alt="Vista 3" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                    </div>
+                </div>
+
+                <!-- Descripción -->
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-2">Descripción</span>
+                    <h3 class="mb-3">Tienda en línea para productos artesanales</h3>
+                    <p>Verova es una plataforma de e-commerce desarrollada para la venta de productos artesanales. El proyecto fue construido en colaboración con Gabriel Toaquiza y Juan Pacheco, quien lideró el desarrollo del backend y la arquitectura general, mientras que mi participación se centró en el diseño del frontend, la experiencia de usuario y la implementación de las vistas.</p>
+                    <p>La plataforma permite a los usuarios explorar un catálogo de productos, personalizar pedidos, gestionar un carrito de compras, marcar favoritos y completar pedidos mediante pago por transferencia verificada manualmente. También incluye un panel de administración para gestionar productos, pedidos y usuarios.</p>
+                </div>
+
+                <!-- Funcionalidades -->
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-3">Funcionalidades principales</span>
+                    <ul class="project-features-list mt-3">
+                        <li>Catálogo de productos con filtros y búsqueda</li>
+                        <li>Personalización de productos por variante o detalle</li>
+                        <li>Carrito de compras persistente y lista de favoritos</li>
+                        <li>Proceso de pedido con pago por transferencia bancaria</li>
+                        <li>Panel de administración para gestión de inventario y pedidos</li>
+                        <li>Sistema de autenticación y registro de usuarios</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Columna lateral -->
+            <div class="col-lg-4">
+
+                <div class="project-sidebar-card mb-4">
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Tipo</span>
+                        <span>E-commerce / Web App</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Rol</span>
+                        <span>Frontend & UX (colaboración)</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Colaboradores</span>
+                        <span>Gabriel Toaquiza y Juan Pacheco</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Estado</span>
+                        <span>Completado</span>
+                    </div>
+                </div>
+
+                <div class="project-sidebar-card mb-4">
+                    <span class="project-sidebar-label mb-3 d-block">Stack tecnológico</span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">Flask</span>
+                        <span class="stack-pill">Bootstrap</span>
+                        <span class="stack-pill">Jinja2</span>
+                        <span class="stack-pill">SQLAlchemy</span>
+                        <span class="stack-pill">SQLite</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/gabriel-toaquiza/e-shoop"
+                   target="_blank" rel="noopener"
+                   class="btn-ledger-primary w-100 text-center d-block mb-3">
+                    <i class="bi bi-github me-2"></i>Ver en GitHub
+                </a>
+                <a href="{{ url_for('main.proyectos') }}"
+                   class="btn-ledger-outline w-100 text-center d-block">
+                    ← Volver a proyectos
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

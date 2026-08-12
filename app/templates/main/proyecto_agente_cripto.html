@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block titulo %}Agente de Criptomonedas | Mi Portafolio{% endblock %}
+
+{% block contenido %}
+
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">
+            <a href="{{ url_for('main.proyectos') }}" class="eyebrow-back">← Proyectos</a>
+        </span>
+        <h2>Agente de Criptomonedas</h2>
+    </div>
+</section>
+
+<section class="section-ledger">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-8">
+
+                <div class="project-gallery mb-5">
+                    <img id="gallery-main"
+                         src="{{ url_for('static', filename='img/proyectos/agente-cripto/agente-cripto-1.jpg') }}"
+                         alt="Agente de Criptomonedas"
+                         class="project-gallery-main mb-3">
+                    <div class="project-gallery-thumbs">
+                        <img src="{{ url_for('static', filename='img/proyectos/agente-cripto/agente-cripto-1.jpg') }}"
+                             alt="Vista 1" class="gallery-thumb active"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/agente-cripto/agente-cripto-2.jpg') }}"
+                             alt="Vista 2" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/agente-cripto/agente-cripto-3.jpg') }}"
+                             alt="Vista 3" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                    </div>
+                </div>
+
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-2">Descripción</span>
+                    <h3 class="mb-3">Agente de IA para gestión de portafolios cripto</h3>
+                    <p>Agente inteligente desarrollado en Python para analizar y gestionar portafolios de criptomonedas de forma automatizada. El sistema consulta precios en tiempo real, evalúa el rendimiento del portafolio y genera reportes con métricas clave de inversión.</p>
+                    <p>El agente utiliza APIs de mercado de criptomonedas para obtener datos actualizados y aplica lógica de análisis para detectar tendencias, calcular variaciones de precio y presentar un resumen visual del estado del portafolio.</p>
+                </div>
+
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-3">Funcionalidades principales</span>
+                    <ul class="project-features-list mt-3">
+                        <li>Consulta de precios en tiempo real vía API de criptomonedas</li>
+                        <li>Registro y seguimiento de portafolio personalizado</li>
+                        <li>Cálculo de rendimiento, variación porcentual y valor total</li>
+                        <li>Generación de reportes semanales de cartera</li>
+                        <li>Análisis técnico básico con indicadores de tendencia</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="project-sidebar-card mb-4">
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Tipo</span>
+                        <span>Agente de IA / Script Python</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Rol</span>
+                        <span>Desarrollo completo</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Estado</span>
+                        <span>En desarrollo</span>
+                    </div>
+                </div>
+
+                <div class="project-sidebar-card mb-4">
+                    <span class="project-sidebar-label mb-3 d-block">Stack tecnológico</span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="stack-pill">Python</span>
+                        <span class="stack-pill">Requests</span>
+                        <span class="stack-pill">Pandas</span>
+                        <span class="stack-pill">CoinGecko API</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/Navo1804/Agente-Criptomonedas"
+                   target="_blank" rel="noopener"
+                   class="btn-ledger-primary w-100 text-center d-block mb-3">
+                    <i class="bi bi-github me-2"></i>Ver en GitHub
+                </a>
+                <a href="{{ url_for('main.proyectos') }}"
+                   class="btn-ledger-outline w-100 text-center d-block">
+                    ← Volver a proyectos
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

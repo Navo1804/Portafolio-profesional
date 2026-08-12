@@ -30,6 +30,21 @@ def proyectos():
     return render_template('main/proyectos.html')
 
 
+@main_bp.route('/proyectos/verova')
+def proyecto_verova():
+    return render_template('main/proyecto_verova.html')
+
+
+@main_bp.route('/proyectos/agente-cripto')
+def proyecto_agente_cripto():
+    return render_template('main/proyecto_agente_cripto.html')
+
+
+@main_bp.route('/proyectos/edificio-sigma')
+def proyecto_edificio_sigma():
+    return render_template('main/proyecto_edificio_sigma.html')
+
+
 @main_bp.route('/contacto', methods=['GET', 'POST'])
 def contacto():
     form = ContactoForm()

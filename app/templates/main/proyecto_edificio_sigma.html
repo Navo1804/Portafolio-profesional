@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% block titulo %}Edificio Sigma | Mi Portafolio{% endblock %}
+
+{% block contenido %}
+
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">
+            <a href="{{ url_for('main.proyectos') }}" class="eyebrow-back">← Proyectos</a>
+        </span>
+        <h2>Edificio Sigma</h2>
+    </div>
+</section>
+
+<section class="section-ledger">
+    <div class="container">
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-8">
+
+                <div class="project-gallery mb-5">
+                    <img id="gallery-main"
+                         src="{{ url_for('static', filename='img/proyectos/edificio-sigma/edificio-sigma-1.jpg') }}"
+                         alt="Edificio Sigma"
+                         class="project-gallery-main mb-3">
+                    <div class="project-gallery-thumbs">
+                        <img src="{{ url_for('static', filename='img/proyectos/edificio-sigma/edificio-sigma-1.jpg') }}"
+                             alt="Vista 1" class="gallery-thumb active"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/edificio-sigma/edificio-sigma-2.jpg') }}"
+                             alt="Vista 2" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                        <img src="{{ url_for('static', filename='img/proyectos/edificio-sigma/edificio-sigma-3.jpg') }}"
+                             alt="Vista 3" class="gallery-thumb"
+                             onclick="switchImg(this)">
+                    </div>
+                </div>
+
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-2">Descripción</span>
+                    <h3 class="mb-3">Análisis financiero y propuesta de expansión</h3>
+                    <p>Proyecto de análisis financiero integral basado en los estados financieros de la empresa Hidalgo e Hidalgo S.A. El trabajo consistió en evaluar la situación económica actual de la empresa, identificar oportunidades de inversión y elaborar una propuesta de expansión fundamentada en los datos reales del negocio.</p>
+                    <p>El informe incluye un análisis de ratios financieros, proyecciones de flujo de caja, evaluación de rentabilidad y una propuesta de inversión con estimaciones de retorno. Se presentó como un sitio web interactivo desarrollado en Canva Sites.</p>
+                </div>
+
+                <div class="project-detail-section mb-5">
+                    <span class="eyebrow mb-3">Componentes del análisis</span>
+                    <ul class="project-features-list mt-3">
+                        <li>Análisis de estados financieros (balance general y estado de resultados)</li>
+                        <li>Cálculo e interpretación de indicadores de liquidez, solvencia y rentabilidad</li>
+                        <li>Proyección de flujo de caja para los próximos 3 años</li>
+                        <li>Propuesta de inversión con análisis de VAN y TIR</li>
+                        <li>Presentación web interactiva con visualización de datos</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="project-sidebar-card mb-4">
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Tipo</span>
+                        <span>Análisis financiero</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Rol</span>
+                        <span>Análisis & presentación</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Empresa base</span>
+                        <span>Hidalgo e Hidalgo S.A.</span>
+                    </div>
+                    <div class="project-sidebar-item">
+                        <span class="project-sidebar-label">Estado</span>
+                        <span>Completado</span>
+                    </div>
+                </div>
+
+                <div class="project-sidebar-card mb-4">
+                    <span class="project-sidebar-label mb-3 d-block">Herramientas</span>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="stack-pill">Excel</span>
+                        <span class="stack-pill">Canva Sites</span>
+                        <span class="stack-pill">Análisis financiero</span>
+                    </div>
+                </div>
+
+                <a href="https://hidalgotunuevohogar.my.canva.site/"
+                   target="_blank" rel="noopener"
+                   class="btn-ledger-primary w-100 text-center d-block mb-3">
+                    <i class="bi bi-box-arrow-up-right me-2"></i>Ver proyecto
+                </a>
+                <a href="{{ url_for('main.proyectos') }}"
+                   class="btn-ledger-outline w-100 text-center d-block">
+                    ← Volver a proyectos
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
