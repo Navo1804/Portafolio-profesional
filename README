@@ -97,17 +97,6 @@ Abre [http://127.0.0.1:5000](http://127.0.0.1:5000) en tu navegador.
 
 ---
 
-## Despliegue en producción (Railway)
-
-El proyecto ya incluye `Procfile` y `wsgi.py`, listos para desplegar en [Railway](https://railway.app):
-
-1. Sube el repositorio a GitHub (verifica que `.env` no esté incluido).
-2. En Railway: **New Project → Deploy from GitHub repo**.
-3. En la pestaña **Variables** del servicio, agrega manualmente cada variable que tienes en tu `.env` local.
-4. En **Settings → Networking**, genera el dominio público.
-
----
-
 ## Notas de seguridad
 
 - Ninguna contraseña o clave está escrita directamente en el código — todo se lee desde variables de entorno (`.env` local, o "Variables" en Railway).
