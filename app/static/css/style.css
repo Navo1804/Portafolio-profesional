@@ -14,6 +14,7 @@
     --steel-light:#94A0B2;   /* texto terciario / placeholders */
     --gold:       #A9791F;   /* acento — usar con moderación */
     --gold-soft:  #D9B463;   /* acento claro, sobre fondo oscuro */
+    --gold-text: #8A6118; /* dorado con contraste AA */
     --border:     #E2E4E8;   /* líneas finas sobre fondo claro */
     --border-dark: rgba(245, 246, 248, 0.14); /* líneas finas sobre fondo oscuro */
 }
@@ -307,7 +308,7 @@ h1, h2, h3, .font-display {
 .study-info .study-period {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.9rem;
-    color: var(--gold);
+    color: var(-gold-text);
     display: block;
     margin-top: 5px;
 }
@@ -340,7 +341,7 @@ h1, h2, h3, .font-display {
 .ledger-row .ledger-period {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8rem;
-    color: var(--gold);
+    color: var(--gold-text);
     white-space: nowrap;
 }
 
@@ -447,7 +448,7 @@ h1, h2, h3, .font-display {
     font-size: 0.68rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--gold-text);
     margin-bottom: 0.75rem;
     display: block;
 }
@@ -556,7 +557,7 @@ h1, h2, h3, .font-display {
 
 .experience-list li::before {
     content: '✓';
-    color: var(--gold);
+    color: var(--gold-text);
     font-weight: 700;
     flex-shrink: 0;
     margin-top: 0.1rem;
@@ -591,7 +592,7 @@ h1, h2, h3, .font-display {
 
 .cta-banner .cta-text i {
     font-size: 1.4rem;
-    color: var(--gold);
+    color: var(--gold-text);
 }
 
 .cta-banner p {
@@ -874,7 +875,7 @@ a:focus-visible, button:focus-visible, .form-control:focus-visible {
 }
 
 .fact-pill i {
-    color: var(--gold);
+    color: var(--gold-text);
     font-size: 1.05rem;
 }
 

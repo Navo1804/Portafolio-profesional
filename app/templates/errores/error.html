@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
-{% block titulo %}Error {{ codigo }}{% endblock %}
+{% block titulo %}Error {{ codigo }} | Mi Portafolio{% endblock %}
 
 {% block contenido %}
-<section class="hero-ledger text-center">
-    <div class="container hero-inner">
-        <span class="eyebrow" style="justify-content: center;">Error {{ codigo }}</span>
-        <h1 class="mt-2">{{ mensaje }}</h1>
-        <a href="{{ url_for('main.home') }}" class="btn-ledger-primary mt-3">Volver al inicio</a>
+<section class="about-banner">
+    <div class="container">
+        <span class="eyebrow">Error {{ codigo }}</span>
+        <h2>Algo no salió bien</h2>
+    </div>
+</section>
+
+<section class="section-ledger text-center">
+    <div class="container">
+        <p class="text-secondary mb-4" style="font-size: 1.1rem;">{{ mensaje }}</p>
+        <a href="{{ url_for('main.home') }}" class="btn-pill">Volver al inicio</a>
     </div>
 </section>
 {% endblock %}
